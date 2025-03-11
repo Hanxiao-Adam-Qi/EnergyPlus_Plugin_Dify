@@ -1,0 +1,17 @@
+identity:
+  name: get_weathers
+  author: han
+  label:
+    en_US: get weathers
+    zh_Hans: 获取天气数据
+    pt_BR: obter dados de clima
+description:
+  human:
+    en_US: A tool for getting weathers of energyplus simulation.
+    zh_Hans: 一个用于获取energyplus模拟天气数据的工具。
+    pt_BR: uma ferramenta para obter dados de clima de simulação de energyplus.
+  llm: A tool for getting weathers of energyplus simulation.
+
+extra:
+  python:
+    source: tools/get_weathers.py

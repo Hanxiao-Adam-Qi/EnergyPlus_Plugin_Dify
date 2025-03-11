@@ -1,0 +1,30 @@
+identity:
+  author: han
+  name: energyplus_tools
+  label:
+    en_US: EnergyPlus Plugin
+    zh_Hans: EnergyPlus 插件
+  description:
+    en_US: A plugin to run EnergyPlus simulations and get results.
+    zh_Hans: 用于运行 EnergyPlus 仿真并获取结果的插件。
+  icon: energyplus.png
+credentials_for_provider: #添加 credentials_for_provider 字段
+  energyPlus_url:
+    default: http://192.168.0.66:8000
+    type: text-input
+    required: true
+    label:
+      en_US: EnergyPlus Engine url
+      zh_Hans: EnergyPlus 引擎链接
+    placeholder:
+      en_US: Please input your EnergyPlus Engine url
+      zh_Hans: 请输入你的 EnergyPlus 引擎链接
+tools:
+  - tools/run_simulation.yaml
+  - tools/get_specific_results.yaml
+  - tools/get_all_results.yaml
+  - tools/get_examples.yaml
+  - tools/get_weathers.yaml
+extra:
+  python:
+    source: provider/energyplus_tools.py

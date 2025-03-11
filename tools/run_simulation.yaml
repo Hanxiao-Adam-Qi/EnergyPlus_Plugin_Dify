@@ -1,0 +1,43 @@
+identity:
+  name: run_simulation
+  author: Han
+  label:
+    en_US: run simulation
+    zh_Hans: 开始模拟计算
+    pt_BR: run simulation
+description:
+  human:
+    en_US: A tool for running energyplus simulation.Input should be a idf file and weather file.
+    zh_Hans: 一个用于运行energyplus模拟的工具。输入应该是一个idf文件和天气文件。
+    pt_BR: A tool for running energyplus simulation.Input should be a idf file and weather file.
+  llm: A tool for running energyplus simulation.Input should be a idf file and weather file.
+parameters:
+  - name: idf_file
+    type: string
+    required: true
+    label:
+      en_US: idf file
+      zh_Hans: idf文件
+      pt_BR: idf file
+    human_description:
+      en_US: the idf file of energyplus
+      zh_Hans: energyplus的idf文件
+      pt_BR: o arquivo idf do energyplus
+    llm_description: the idf file of energyplus
+    form: llm
+  - name: weather_file
+    type: string
+    required: true
+    label:
+      en_US: weather file
+      zh_Hans: 天气文件
+      pt_BR: arquivo de clima
+    human_description:
+      en_US: the weather file of energyplus
+      zh_Hans: energyplus的天气文件
+      pt_BR: o arquivo de clima do energyplus
+    llm_description: the weather file of energyplus
+    form: llm
+extra:
+  python:
+    source: tools/run_simulation.py

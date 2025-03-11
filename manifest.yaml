@@ -1,0 +1,42 @@
+version: 0.0.1
+type: plugin
+author: han
+name: energyplus_tools
+label:
+  en_US: energyplus_tools
+  ja_JP: energyplus_tools
+  zh_Hans: energyplus_tools
+  pt_BR: energyplus_tools
+description:
+  en_US: energy plus tools
+  ja_JP: energy plus tools
+  zh_Hans: energy plus tools
+  pt_BR: energy plus tools
+icon: energyplus.png
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - provider/energyplus_tools.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-03-08T15:25:15.262636274+01:00
+privacy: PRIVACY.md
+verified: false
