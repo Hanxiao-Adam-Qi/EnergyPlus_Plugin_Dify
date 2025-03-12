@@ -31,4 +31,6 @@
 5. **获取所有结果** (get_all_results)
    - 输出：所有模拟运行的结果列表
 
+6. **获取某一特定energyplus模拟结果中的所有结果文件** (get_all_result_files)
+   - 输出： 某一特定energyplus模拟结果中的所有结果文件
 
