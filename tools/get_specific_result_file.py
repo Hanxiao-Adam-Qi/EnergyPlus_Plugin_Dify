@@ -3,7 +3,7 @@ from dify_plugin import Tool
 from dify_plugin.entities.tool import ToolInvokeMessage
 import mimetypes
 
-class GetSpecificResultsTool(Tool):
+class GetSpecificResultFileTool(Tool):
     def _get_mime_type(self, filename: str) -> str:
         """根据文件名确定MIME类型"""
         # EnergyPlus 特有的文件类型映射
@@ -54,7 +54,7 @@ class GetSpecificResultsTool(Tool):
             return [self.create_text_message("Missing required parameter: file_name")]
 
         energyPlus_url = self.runtime.credentials.get("energyPlus_url", "http://192.168.0.66:8000")
-        api_url = f"{energyPlus_url}/get-specific-results/{run_id}/{file_name}"
+        api_url = f"{energyPlus_url}/get-specific-result-file/{run_id}/{file_name}"
         
         try:
             response = requests.get(api_url)

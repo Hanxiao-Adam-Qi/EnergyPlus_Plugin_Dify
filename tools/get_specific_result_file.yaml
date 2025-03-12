@@ -1,15 +1,15 @@
 identity:
-  name: get_specific_results
+  name: get_specific_result_file
   author: han
   label:
-    en_US: get specific results
-    zh_Hans: 获取特定结果
-    pt_BR: obter resultados específicos
+    en_US: get specific result file
+    zh_Hans: 获取特定结果文件
+    pt_BR: obter arquivo de resultado específico
 description:
   human:
-    en_US: A tool for getting specific results of energyplus simulation.Input should be a run_id and a file_name.
-    zh_Hans: 一个用于获取某一特定energyplus模拟结果的工具。输入应该是一个run_id和一个文件名, 返回结果是包含文件的下载链接的json
-    pt_BR: uma ferramenta para obter resultados específicos de simulação de energyplus.A entrada deve ser um run_id e um file_name.
+    en_US: A tool for getting specific result file of energyplus simulation.Input should be a run_id and a file_name.
+    zh_Hans: 一个用于获取某一特定energyplus模拟结果文件的工具。输入应该是一个run_id和一个文件名, 返回结果是包含文件的下载链接的json
+    pt_BR: uma ferramenta para obter arquivo de resultado específico de simulação de energyplus.A entrada deve ser um run_id e um file_name.
   llm: A tool for getting specific results of energyplus simulation.Input should be a run_id and a file_name.
 parameters:
   - name: run_id
@@ -40,4 +40,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/get_specific_results.py
+    source: tools/get_specific_result_file.py

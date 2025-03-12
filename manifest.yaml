@@ -1,17 +1,13 @@
-version: 0.0.1
+version: 0.0.2
 type: plugin
-author: han
+author: hanxiao-adam-qi
 name: energyplus_tools
 label:
   en_US: energyplus_tools
-  ja_JP: energyplus_tools
   zh_Hans: energyplus_tools
-  pt_BR: energyplus_tools
 description:
   en_US: energy plus tools
-  ja_JP: energy plus tools
   zh_Hans: energy plus tools
-  pt_BR: energy plus tools
 icon: energyplus.png
 resource:
   memory: 268435456
