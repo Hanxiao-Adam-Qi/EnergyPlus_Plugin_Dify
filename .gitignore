@@ -169,3 +169,6 @@ cython_debug/
 
 # Vscode
 .vscode/
+
+# Plugin binary files
+binFiles/
