@@ -172,3 +172,7 @@ cython_debug/
 
 # Plugin binary files
 binFiles/
+
+# FastAPI
+fastAPI_energyPlus/data/output/
+fastAPI_energyPlus/__pycache__/
