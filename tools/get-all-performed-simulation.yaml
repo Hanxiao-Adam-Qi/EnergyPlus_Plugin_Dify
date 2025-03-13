@@ -1,0 +1,16 @@
+identity:
+  name: get_all_performed_simulation
+  author: han
+  label:
+    en_US: get all performed simulation
+    zh_Hans: 获取所有模拟结果列表
+    pt_BR: obter todas as simulações realizadas
+description:
+  human:
+    en_US: A tool for getting all results of energyplus simulation.
+    zh_Hans: 一个用于获取所有模拟结果的工具。
+    pt_BR: uma ferramenta para obter todos os resultados de simulação de energyplus.
+  llm: A tool for getting all results of energyplus simulation.
+extra:
+  python:
+    source: tools/get-all-performed-simulation.py

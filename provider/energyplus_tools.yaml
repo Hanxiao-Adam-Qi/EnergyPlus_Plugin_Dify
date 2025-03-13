@@ -20,12 +20,12 @@ credentials_for_provider: #添加 credentials_for_provider 字段
       en_US: Please input your EnergyPlus Engine url
       zh_Hans: 请输入你的 EnergyPlus 引擎链接
 tools:
-  - tools/run_simulation.yaml
-  - tools/get_specific_result_file.yaml
-  - tools/get_all_results.yaml
-  - tools/get_examples.yaml
-  - tools/get_weathers.yaml
-  - tools/get_all_result_files.yaml
+  - tools/run-simulation.yaml
+  - tools/get-specific-result-file.yaml
+  - tools/get-all-performed-simulation.yaml
+  - tools/get-examples.yaml
+  - tools/get-weathers.yaml
+  - tools/get-simulation-result-file-list.yaml
 extra:
   python:
     source: provider/energyplus_tools.py

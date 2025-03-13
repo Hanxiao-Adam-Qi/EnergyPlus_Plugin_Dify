@@ -1,14 +1,14 @@
 identity:
-  name: get_all_result_files
+  name: get_simulation_result_file_list
   author: han
   label:
-    en_US: get all result files
-    zh_Hans: 获取所有结果文件
-    pt_BR: obter todos os arquivos de resultado
+    en_US: get all result files of a simulation
+    zh_Hans: 获取特定模拟中的所有结果列表
+    pt_BR: obter todos os arquivos de resultado de uma simulação de energyplus
 description:
   human:
     en_US: A tool for getting all result files of energyplus simulation.Input should be a run_id.
-    zh_Hans: 一个用于获取某一特定energyplus模拟结果中的所有结果文件的工具。输入应该是一个run_id, 返回结果是包含所有结果文件的json
+    zh_Hans: 一个用于获取某一特定energyplus模拟中的所有结果文件的工具。输入应该是一个run_id, 返回结果是包含所有结果文件的json
     pt_BR: uma ferramenta para obter todos os arquivos de resultado de simulação de energyplus.A entrada deve ser um run_id.
   llm: A tool for getting all result files of energyplus simulation.Input should be a run_id.
 parameters:
@@ -40,4 +40,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/get_all_result_files.py
+    source: tools/get-simulation-result-file-list.py

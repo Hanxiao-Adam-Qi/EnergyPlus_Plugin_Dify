@@ -9,7 +9,7 @@ class GetAllResultFilesTool(Tool):
         if not run_id:
             return [self.create_text_message("Missing required parameter: run_id")]
         energyPlus_url = self.runtime.credentials.get("energyPlus_url", "http://192.168.0.66:8000")
-        api_url = f"{energyPlus_url}/get-result-file-list/{run_id}"
+        api_url = f"{energyPlus_url}/get-simulation-result-file-list/{run_id}"
         response = requests.get(api_url)
         if response.status_code == 200:
             return [self.create_json_message(response.json())]

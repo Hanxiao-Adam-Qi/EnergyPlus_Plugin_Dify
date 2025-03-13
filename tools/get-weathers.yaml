@@ -14,4 +14,4 @@ description:
 
 extra:
   python:
-    source: tools/get_weathers.py
+    source: tools/get-weathers.py

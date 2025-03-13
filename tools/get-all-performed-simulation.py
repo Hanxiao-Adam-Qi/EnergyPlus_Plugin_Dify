@@ -6,7 +6,7 @@ class GetAllResultsTool(Tool):
     def _invoke(self, tool_parameters: dict) -> ToolInvokeMessage:
         # 调用 FastAPI 获取 EnergyPlus 仿真结果
         energyPlus_url = self.runtime.credentials.get("energyPlus_url", "http://192.168.0.66:8000")
-        api_url = f"{energyPlus_url}/get-all-results"
+        api_url = f"{energyPlus_url}/get-all-performed-simulation"
         response = requests.get(api_url)
 
         if response.status_code == 200:

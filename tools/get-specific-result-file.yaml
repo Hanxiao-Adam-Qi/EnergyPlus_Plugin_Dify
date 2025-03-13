@@ -40,4 +40,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/get_specific_result_file.py
+    source: tools/get-specific-result-file.py

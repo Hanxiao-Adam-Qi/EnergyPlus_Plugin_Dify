@@ -14,4 +14,4 @@ description:
 
 extra:
   python:
-    source: tools/get_examples.py
+    source: tools/get-examples.py

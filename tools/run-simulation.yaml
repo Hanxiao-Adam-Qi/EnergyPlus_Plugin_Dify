@@ -40,4 +40,4 @@ parameters:
     form: llm
 extra:
   python:
-    source: tools/run_simulation.py
+    source: tools/run-simulation.py

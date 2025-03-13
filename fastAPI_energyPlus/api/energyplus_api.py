@@ -36,6 +36,7 @@ class SimulationRequest(BaseModel):
     idf_file: str  # IDF 文件名
     weather_file: str  # 天气数据文件名
 
+# 运行 EnergyPlus 模拟
 @app.post("/run-simulation", summary="Run EnergyPlus simulation", operation_id="run_simulation")
 async def run_simulation(request: SimulationRequest):
     """ Run EnergyPlus simulation and return the result path """
@@ -59,16 +60,23 @@ async def run_simulation(request: SimulationRequest):
 
     return {"message": "EnergyPlus simulation completed", "output_dir": run_output_dir, "run_id": run_id, "weather_file": weather_path, "idf_file": idf_path}
 
-# 获取特定run_id下的所有结果文件的列表
-@app.get("/get-result-file-list/{run_id}", summary="get all results of EnergyPlus simulation", operation_id="get_all_results")
+# 获取所有已完成的模拟结果列表
+@app.get("/get-all-performed-simulation", summary="get all performed simulation", operation_id="get_all_results")
+async def get_all_results():
+    """ Get all the performed simulation """
+    return {"results": os.listdir(OUTPUT_DIR)}
+
+# 获取特定run_id的模拟结果下的所有结果文件的列表
+@app.get("/get-simulation-result-file-list/{run_id}", summary="get all result files of a simulation", operation_id="get_all_results")
 async def get_result_file_list(run_id: str):
-    """ Get all the results of EnergyPlus simulation """
+    """ Get all the result files of a simulation """
     run_output_dir = os.path.join(OUTPUT_DIR, run_id)
     return {"results": os.listdir(run_output_dir)}
 
-@app.get("/get-specific-result-file/{run_id}/{file_name}", summary="get results of EnergyPlus simulation", operation_id="get_specific_results")
+# 获取特定run_id下的特定结果文件
+@app.get("/get-specific-result-file/{run_id}/{file_name}", summary="get a specific result file of a simulation", operation_id="get_specific_results")
 async def get_specific_results(run_id: str, file_name: str):
-    """ Get the specified file from the specified run ID """
+    """ Get a specific result file of a simulation """
     run_output_dir = os.path.join(OUTPUT_DIR, run_id)
     if not os.path.exists(run_output_dir):
         raise HTTPException(status_code=404, detail="Invalid run ID or results not found")
@@ -85,6 +93,7 @@ async def get_specific_results(run_id: str, file_name: str):
         "run_id": run_id
     }
 
+# 下载特定run_id下的特定结果文件
 @app.get("/download-result/{run_id}/{file_name}", summary="download result file", operation_id="download_result")
 async def download_result(run_id: str, file_name: str):
     """Download the actual file"""
@@ -100,17 +109,14 @@ async def download_result(run_id: str, file_name: str):
         filename=file_name
     )
 
-@app.get("/get-all-results", summary="get all results of EnergyPlus simulation", operation_id="get_all_results")
-async def get_all_results():
-    """ Get all the results """
-    return {"results": os.listdir(OUTPUT_DIR)}
-
+# 获取所有示例文件列表
 @app.get("/get-examples", summary="get examples of EnergyPlus simulation", operation_id="get_examples")
 async def get_examples():
     """ Get the examples input files of EnergyPlus simulation """
     examples_list = os.listdir(EXAMPLES_DIR)
     return {"examples": examples_list}
 
+# 获取所有天气文件列表
 @app.get("/get-weathers", summary="get weathers of EnergyPlus simulation", operation_id="get_weathers")
 async def get_weathers():
     """ Get the weather files of EnergyPlus simulation """
