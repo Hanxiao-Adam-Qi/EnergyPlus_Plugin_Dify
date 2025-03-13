@@ -25,19 +25,6 @@ parameters:
       pt_BR: o id da execução da simulação
     llm_description: the id of the performed simulation run
     form: llm
-  - name: file_name
-    type: string
-    required: true
-    label:
-      en_US: file_name
-      zh_Hans: 模拟计算结果文件名
-      pt_BR: file_name
-    human_description:
-      en_US: the name of the file containing the results of the simulation
-      zh_Hans: 包含模拟结果的文件的名称
-      pt_BR: o nome do arquivo contendo os resultados da simulação
-    llm_description: the name of the file containing the results of the simulation
-    form: llm
 extra:
   python:
     source: tools/get-simulation-result-file-list.py
