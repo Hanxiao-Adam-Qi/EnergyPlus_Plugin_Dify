@@ -26,6 +26,8 @@ tools:
   - tools/get-examples.yaml
   - tools/get-weathers.yaml
   - tools/get-simulation-result-file-list.yaml
+  - tools/get-specific-weather-file.yaml
+  - tools/get-specific-example-file.yaml
 extra:
   python:
     source: provider/energyplus_tools.py

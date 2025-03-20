@@ -1,0 +1,26 @@
+identity:
+  name: get-specific-weather-file
+  author: han
+  label:
+    en_US: get download url for specific weather file
+    zh_Hans: 获取特定天气文件的下载链接
+description:
+  human:
+    en_US: A tool for getting download url for specific weather file.
+    zh_Hans: 一个用于获取特定天气文件下载链接的工具。
+  llm: A tool for getting download url for specific weather file.
+parameters:
+  - name: file_name
+    type: string
+    required: true
+    label:
+      en_US: File Name
+      zh_Hans: 文件名
+    human_description:
+      en_US: file name of the example file
+      zh_Hans: 示例文件的文件名
+    llm_description: file name of the example file
+    form: llm
+extra:
+  python:
+    source: tools/get-specific-weather-file.py

@@ -1,0 +1,27 @@
+identity:
+  name: get-specific-example-file
+  author: han
+  label:
+    en_US: get download url for specific example file
+    zh_Hans: 获取特定示例文件的下载链接
+    pt_BR: obter exemplos
+description:
+  human:
+    en_US: A tool for getting download url for specific example file.
+    zh_Hans: 一个用于获取特定示例文件下载链接的工具。
+  llm: A tool for getting download url for specific example file.
+parameters:
+  - name: file_name
+    type: string
+    required: true
+    label:
+      en_US: File Name
+      zh_Hans: 文件名
+    human_description:
+      en_US: file name of the example file
+      zh_Hans: 示例文件的文件名
+    llm_description: file name of the example file
+    form: llm
+extra:
+  python:
+    source: tools/get-specific-example-file.py

@@ -2,16 +2,13 @@ identity:
   name: get_examples
   author: han
   label:
-    en_US: get examples
-    zh_Hans: 获取示例IDF文件
-    pt_BR: obter exemplos
+    en_US: get examples list
+    zh_Hans: 获取示例IDF文件列表
 description:
   human:
-    en_US: A tool for getting examples of energyplus simulation.
-    zh_Hans: 一个用于获取energyplus模拟示例IDF文件的工具。
-    pt_BR: uma ferramenta para obter exemplos de simulação de energyplus.
-  llm: A tool for getting examples of energyplus simulation.
-
+    en_US: A tool for getting examples list of energyplus simulation.
+    zh_Hans: 一个用于获取energyplus模拟示例IDF文件列表的工具。
+  llm: A tool for getting example file list of energyplus simulation.
 extra:
   python:
     source: tools/get-examples.py
