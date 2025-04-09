@@ -1,7 +1,5 @@
 # EnergyPlus Tools Plugin for Dify
-
-[English](./README.md) | [中文](./README.zh.md)
-
+Note that this plugin needs to be used with the fastAPI_dify project.
 This is a plugin for Dify that provides tools to interact with EnergyPlus.
 
 ## Features
@@ -56,7 +54,7 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 # EnergyPlus 工具 Dify 插件
 
-[English](./README.md) | [中文](./README.zh.md)
+注意，本插件需要与fastAPI_dify项目搭配使用
 
 这是一个 Dify 插件，提供了与 EnergyPlus 交互的工具。
 
@@ -103,7 +101,3 @@ Contributions are welcome! Please open an issue or submit a pull request.
 ## 贡献
 
 欢迎贡献！请提交 issue 或 pull request。
-
-## 许可证
-
-[在此处指定您的许可证，例如：MIT 许可证]
